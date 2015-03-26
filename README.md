@@ -1,21 +1,25 @@
 # Swagger Starter Kit
 
-This Swagger Starter Kit is a simple way to share a Swagger API specification file, and also make it interactive.
+Swagger Starter Kit is a simple way to share a Swagger API specification file.
+
+This project is based on the Swagger UI project.
+
+See the `examples` directory for simple examples of Swagger specification files using YAML and JSON.
 
 
 ## Create a Swagger file
 
-1. Create a Swagger file any way you like.
+Create a Swagger file any way you like:
 
-  * See the `examples` directory for simple examples.
+  * You can name the file anything you want. Convention is `swagger.yaml` or `swagger.json`.
 
-  * You can name the file anything you want. A convention is to name the file `swagger.yaml` or `swagger.json`.
+  * You can create the file by using any editor to write YAML or JSON.
 
-  * You can create the file by using any editor to write YAML or JSON, or you can create the file by using the [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen/blob/master/README.md) or similar tool.
+  * If you want more power, try the [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen/blob/master/README.md).
 
-2. Put the file anywhere on the web.
+Put the file anywhere on the web:
 
-  * We typically put the file at the top level of a site, such as `http://example.com/swagger.json`.
+  * We typically put the file at the top of a site, such as `http://example.com/swagger.json`.
 
   * Browse to the URL. This verifies the file is readable by your web browser.
 
@@ -24,24 +28,24 @@ This Swagger Starter Kit is a simple way to share a Swagger API specification fi
 
 ## Create a Swagger server
 
-1. Edit the files in this directory as you like.
+Edit the files in this directory as you like:
 
    * Edit `index.html` to see how to add your file's URL as the default URL.
 
    * Customize anything you want, such as HTML, CSS, JS.
 
-2. Copy everything in this directory to any directory on any webserver.
+Copy everything here to any directory on any webserver:
 
    * We typically put this at the top level of a site, such as `http://example.com/swagger/`.
 
-   * This directory can be anywhere; it doesn't need to be in the same location as your `swagger.json` file.
+   * This directory can be anywhere; it doesn't need to be with your `swagger.json` file.
 
-   * Browse to the URL. This should load the Swagger code and also load your Swagger file.
+   * Browse to the URL. This should load the Swagger code and your Swagger file.
 
 
-## Swagger YAML to Swagger JSON
+## YAML to JSON
 
-To translate Swagger YAML to Swagger JSON, you can do it any way you want.
+To translate Swagger YAML to Swagger JSON, you can do it any way you want:
 
   * If you want a quick web tool, then try [yamltojson.com](http://yamltojson.com/)
 
@@ -56,13 +60,11 @@ This repository is based on the Swagger UI `dist` directory.
 
 We make these adjustments:
 
-  * Edit `index.html` to make it more user-friendly for novices, and independent of the Swagger "Pet Store" demo.
+  * Edit `index.html` to make it easier for novices, and to remove the "Pet Store" demo.
 
-  * Remove unneeded directories and files, such as `fonts` and `typography.css`.
+  * Delete unneeded directories and files, such as `fonts` and `typography.css`.
 
   * Move the swagger-*.js files to the `lib` directory.
-
-Our goal is to have a simple way to serve a standalone Swagger file, without an extras such as fonts, images, code generation, etc.
 
 
 ## Work In Progress
@@ -74,4 +76,10 @@ Continue cleaning out "Pet Store" items.
 
 ## To Do
 
-Automate the tracking of Swagger UI: when Swagger UI `dist` is updated, we want this repo updated too.
+Automate the tracking of Swagger UI:
+
+  * When Swagger UI `dist` is updated, we want this repo updated too.
+
+Consider suggesting this starter kit as a top level Swagger project.
+
+  * If people are interested in this, please let us know, and we'll proceed.
