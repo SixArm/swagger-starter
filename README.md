@@ -4,7 +4,7 @@ Swagger Starter Kit is a simple way to share a Swagger API specification file.
 
 This project is based on the Swagger UI project.
 
-See the `examples` directory for simple examples of Swagger specification files using YAML and JSON.
+To get started, look in the `examples` directory and see the `swagger.yaml` file.
 
 
 ## Create a Swagger file
@@ -17,13 +17,21 @@ Create a Swagger file any way you like:
 
   * If you want more power, try the [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen/blob/master/README.md).
 
-Put the file anywhere on the web:
+If your file uses YAML, then translate it to JSON:
+
+  * For a quick web tool, try [yamltojson.com](http://yamltojson.com/)
+
+  * For a command line script, try [yaml-to-json](https://github.com/SixArm/sixarm_unix_shell_scripts/blob/master/yaml-to-json)
+
+  * For a powerful converter, try [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen/blob/master/README.md)
+
+Host the file anywhere on the web:
 
   * We typically put the file at the top of a site, such as `http://example.com/swagger.json`.
 
   * Browse to the URL. This verifies the file is readable by your web browser.
 
-  * Browse to `http://petstore.swagger.io/` and enter the URL of the file. This verfies the file is readable by Swagger code.
+  * Browse to `http://petstore.swagger.io/` and enter the file's URL. This validates the file.
 
 
 ## Create a Swagger server
@@ -32,7 +40,9 @@ Edit the files in this directory as you like:
 
    * Edit `index.html` to see how to add your file's URL as the default URL.
 
-   * Customize anything you want, such as HTML, CSS, JS.
+   * Customize `index.html` if your API uses an API key, or authentication token, etc.
+
+   * Customize anything else you want, such as HTML, CSS, JS.
 
 Copy everything here to any directory on any webserver:
 
@@ -40,18 +50,7 @@ Copy everything here to any directory on any webserver:
 
    * This directory can be anywhere; it doesn't need to be with your `swagger.json` file.
 
-   * Browse to the URL. This should load the Swagger code and your Swagger file.
-
-
-## YAML to JSON
-
-To translate Swagger YAML to Swagger JSON, you can do it any way you want:
-
-  * If you want a quick web tool, then try [yamltojson.com](http://yamltojson.com/)
-
-  * If you want a command line script, then try [yaml-to-json](https://github.com/SixArm/sixarm_unix_shell_scripts/blob/master/yaml-to-json)
-
-  * If you want a powerful converter, then try [Swagger Code Generator](https://github.com/swagger-api/swagger-codegen/blob/master/README.md)
+   * Browse to the URL. This loads the Swagger code and your Swagger file.
 
 
 ## How this repo relates to Swagger UI
