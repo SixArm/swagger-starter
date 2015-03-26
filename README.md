@@ -58,7 +58,7 @@ Copy everything here to any directory on any webserver:
 
 This repository is based on the Swagger UI `dist` directory.
 
-We make these adjustments:
+We make some adjustments, such as:
 
   * Edit `index.html` to make it easier for novices, and to remove the "Pet Store" demo.
 
