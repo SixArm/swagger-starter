@@ -6,7 +6,7 @@ This project is based on the [Swagger UI](https://github.com/swagger-api/swagger
 
 To get started, look in the `examples` directory and see the `swagger.yaml` file.
 
-For more about Swagger, see the (Swagger API)[https://github.com/swagger-api] page.
+For more about Swagger, see the [Swagger API](https://github.com/swagger-api) page.
 
 ## Create a Swagger file
 
