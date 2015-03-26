@@ -2,10 +2,11 @@
 
 Swagger Starter Kit is a simple way to share a Swagger API specification file.
 
-This project is based on the Swagger UI project.
+This project is based on the [Swagger UI](https://github.com/swagger-api/swagger-ui) project.
 
 To get started, look in the `examples` directory and see the `swagger.yaml` file.
 
+For more about Swagger, see the (Swagger API)[https://github.com/swagger-api] page.
 
 ## Create a Swagger file
 
