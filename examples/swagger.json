@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Swagger Starter Kit Demo",
+    "description": "This is a fast easy way to share your own Swagger specification.",
+    "version": "1.0.0"
+  },
+  "host": "example.com",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/items": {
+      "get": {
+        "summary": "Get a list of items.",
+        "tags": [
+          "Items"
+        ],
+        "description": "\nGet a list of items, typically for the current user.\n",
+        "parameters": [
+          {
+            "$ref": "#/parameters/limit_query"
+          },
+          {
+            "$ref": "#/parameters/offset_query"
+          },
+          {
+            "$ref": "#/parameters/order_query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Items"
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Create an item.",
+        "tags": [
+          "Items"
+        ],
+        "description": "\nCreate an item.\n",
+        "parameters": [
+          {
+            "name": "title",
+            "description": "The item title.",
+            "type": "string",
+            "format": "freeform",
+            "in": "formData",
+            "required": true
+          },
+          {
+            "name": "about",
+            "description": "The item details, such as a description, summary, abstract, etc.",
+            "type": "string",
+            "format": "freeform",
+            "in": "formData",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Items"
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "limit_query": {
+      "name": "limit",
+      "description": "Limit records by a count. Default is 10.",
+      "type": "integer",
+      "format": "count",
+      "in": "query",
+      "required": false
+    },
+    "offset_query": {
+      "name": "offset",
+      "description": "Offset records by a count. Default is 0.",
+      "type": "integer",
+      "format": "count",
+      "in": "query",
+      "required": false
+    },
+    "order_query": {
+      "name": "order",
+      "description": "Order records by a field name. Default is \"id\".",
+      "type": "string",
+      "format": "enum",
+      "in": "query",
+      "required": false
+    }
+  },
+  "definitions": {
+    "Items": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "The item's unique identifier."
+        },
+        "title": {
+          "type": "string",
+          "format": "freeform",
+          "description": "The item's title."
+        },
+        "about": {
+          "type": "string",
+          "format": "freeform",
+          "description": "The item's details, such as a description, summary, abstract, etc."
+        }
+      }
+    },
+    "Error": {
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
